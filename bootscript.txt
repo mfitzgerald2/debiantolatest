@@ -19,4 +19,6 @@ ExecStart=/opt/debiantolatest/versionupdator.sh
 
 WantedBy=default.target
 EOF
+chmod 644 /etc/systemd/system/versionupdator.service
+systemctl enable reboot_message.service
 reboot
