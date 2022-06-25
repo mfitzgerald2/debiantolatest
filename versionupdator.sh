@@ -66,3 +66,4 @@ case $version in
         rm -y /etc/systemd/system/versionupdator.service
         ./opt/debiantolatest/rebunattendedconfig.sh
         ;;
+esac
