@@ -1,3 +1,4 @@
+#!/bin/bash
 #Matt's Auto system update 
 echo -n "STARTING UPDATE SCRIPTS"
 apt-get -y install lsb-release
