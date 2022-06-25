@@ -1,0 +1,21 @@
+#Create Systemd Check on Reboot 
+apt-get -y install git
+git clone https://github.com/mfitzgerald2/debiantolatest.git /opt
+chmod +x /opt/debiantolatest/versionupdator.sh
+chmod +x /top/debiantolatest/unattendedconfig.sh
+cat <<EOF >> /etc/systemd/system/versionupdator.service
+[Unit]
+
+Description=Debian Version Check
+
+After=default.target
+
+[Service]
+
+ExecStart=/opt/debiantolatest/versionupdateor.sh
+
+[Install]
+
+WantedBy=default.target
+EOF
+reboot
