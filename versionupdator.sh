@@ -14,6 +14,7 @@ case $version in
         apt-get -y dist-upgrade
         apt --purge autoremove
         reboot
+        ;;
 
     8.11)
         # 8 to 9
@@ -64,3 +65,4 @@ case $version in
         #Remove script
         rm -y /etc/systemd/system/versionupdator.service
         ./opt/debiantolatest/rebunattendedconfig.sh
+        ;;
